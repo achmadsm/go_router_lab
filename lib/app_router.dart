@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:go_router_lab/splash_screen.dart';
 
+import 'detail_screen.dart';
 import 'home_screen.dart';
 import 'login_screen.dart';
 
@@ -21,6 +22,13 @@ class AppRouter {
       GoRoute(path: Routes.splash, builder: (context, state) => SplashScreen()),
       GoRoute(path: Routes.login, builder: (context, state) => LoginScreen()),
       GoRoute(path: Routes.home, builder: (context, state) => HomeScreen()),
+      GoRoute(
+        path: Routes.detail,
+        builder: (context, state) {
+          final id = state.pathParameters['id']!; // Retrieve ID from path parameter
+          return DetailScreen(id: id);
+        },
+      ),
     ],
   );
 }
