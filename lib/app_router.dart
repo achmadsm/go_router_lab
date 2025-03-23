@@ -1,6 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:go_router_lab/splash_screen.dart';
 
+import 'login_screen.dart';
+
 // Define route paths as constants for easy reference
 class Routes {
   static const String splash = '/';
@@ -15,8 +17,8 @@ class AppRouter {
     initialLocation: Routes.splash, // Start with splash screen
     // Define routes and their corresponding builders
     routes: [
-      // Define routes
       GoRoute(path: Routes.splash, builder: (context, state) => SplashScreen()),
+      GoRoute(path: Routes.login, builder: (context, state) => LoginScreen()),
     ],
   );
 }
