@@ -19,10 +19,10 @@ This project demonstrates how to implement navigation in a Flutter app using the
 │-- main.dart        # Entry point of the app
 │-- app_router.dart  # Defines routes and navigation logic
 │-- screens/         # Contains screen implementations
-    │-- splash.dart
-    │-- login.dart
-    │-- home.dart
-    │-- detail.dart
+    │-- splash_screen.dart
+    │-- login_screen.dart
+    │-- home_screen.dart
+    │-- detail_screen.dart
 ```
 
 ## Installation
