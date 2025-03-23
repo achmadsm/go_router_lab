@@ -1,16 +1,61 @@
-# go_router_lab
+# App Router - Flutter Navigation with GoRouter
 
-A new Flutter project.
+This project demonstrates how to implement navigation in a Flutter app using the `go_router` package. It includes basic authentication handling and dynamic route parameters.
 
-## Getting Started
+## Technologies Used
+- **Flutter**: 3.29.2
+- **Java**: 21.0.5 (for Android development)
+- **GoRouter**: For declarative routing management
 
-This project is a starting point for a Flutter application.
+## Features
+- **Splash Screen**: Checks authentication status and redirects accordingly.
+- **Login Screen**: Simple button to simulate authentication.
+- **Home Screen**: Main screen with navigation to a detail screen.
+- **Detail Screen**: Displays a dynamic ID passed as a parameter.
 
-A few resources to get you started if this is your first Flutter project:
+## Project Structure
+```
+/lib
+│-- main.dart        # Entry point of the app
+│-- app_router.dart  # Defines routes and navigation logic
+│-- screens/         # Contains screen implementations
+    │-- splash.dart
+    │-- login.dart
+    │-- home.dart
+    │-- detail.dart
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Installation
+1. Ensure you have Flutter 3.29.2 and Java 21.0.5 installed.
+2. Clone this repository:
+   ```sh
+   git clone https://github.com/achmadsm/go_router_lab.git
+   cd go_router_lab
+   ```
+3. Install dependencies:
+   ```sh
+   flutter pub get
+   ```
+4. Run the app:
+   ```sh
+   flutter run
+   ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Usage
+- The app starts on the **Splash Screen**, which checks login status.
+- If logged in, it navigates to the **Home Screen**; otherwise, it goes to **Login Screen**.
+- The **Home Screen** contains a button to navigate to the **Detail Screen** with a sample ID.
+- The **Detail Screen** displays the ID and provides a button to return home.
+
+## Dependencies
+Ensure the following dependency is added in `pubspec.yaml`:
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  go_router: ^X.Y.Z # Replace with the latest version
+```
+
+## License
+This project is open-source and free to use.
+
