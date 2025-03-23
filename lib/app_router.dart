@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:go_router_lab/splash_screen.dart';
 
+import 'home_screen.dart';
 import 'login_screen.dart';
 
 // Define route paths as constants for easy reference
@@ -19,6 +20,7 @@ class AppRouter {
     routes: [
       GoRoute(path: Routes.splash, builder: (context, state) => SplashScreen()),
       GoRoute(path: Routes.login, builder: (context, state) => LoginScreen()),
+      GoRoute(path: Routes.home, builder: (context, state) => HomeScreen()),
     ],
   );
 }
