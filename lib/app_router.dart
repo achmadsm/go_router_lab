@@ -1,9 +1,9 @@
 import 'package:go_router/go_router.dart';
-import 'package:go_router_lab/splash_screen.dart';
 
-import 'detail_screen.dart';
-import 'home_screen.dart';
-import 'login_screen.dart';
+import 'screen/detail_screen.dart';
+import 'screen/home_screen.dart';
+import 'screen/login_screen.dart';
+import 'screen/splash_screen.dart';
 
 // Define route paths as constants for easy reference
 class Routes {
@@ -25,7 +25,8 @@ class AppRouter {
       GoRoute(
         path: Routes.detail,
         builder: (context, state) {
-          final id = state.pathParameters['id']!; // Retrieve ID from path parameter
+          final id =
+              state.pathParameters['id']!; // Retrieve ID from path parameter
           return DetailScreen(id: id);
         },
       ),
